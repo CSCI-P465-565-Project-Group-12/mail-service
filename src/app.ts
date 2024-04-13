@@ -6,6 +6,7 @@ dotenv.config();
 
 const app: Express = express();
 const port: number = 8081;
+export const jwtSecret: string = process.env.JWT_SECRET as string;
 
 
 // Environment variables for email configuration

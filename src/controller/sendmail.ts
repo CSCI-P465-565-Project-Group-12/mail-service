@@ -26,3 +26,19 @@ export const sendMail =  async (mailOptions:any) => {
     return false
   }
 }
+
+export const sendMailController = async (req: Request, res: Response) => {
+  const { to, subject, text } = req.body;
+  const mailOptions = {
+    from: email,
+    to: to,
+    subject: subject,
+    text: text,
+  };
+  const emailSent = await sendMail(mailOptions);
+  if (emailSent) {
+    res.status(200).send('Email sent successfully');
+  } else {
+    res.status(500).send('Email send error');
+  }
+};
