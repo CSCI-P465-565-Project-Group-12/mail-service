@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app: Express = express();
-const port: number = 8081;
+const port: number = 8082;
 export const jwtSecret: string = process.env.JWT_SECRET as string;
 
 
