@@ -10,6 +10,6 @@ const router = express.Router();
 router.post("/forgot-password-mail", forgotPasswordMail);
 router.post("/event-registration-confirmation-mail", eventRegistrationConfirmationMail)
 router.post("/send-mail", sendMailController);
-router.post("/health-check", healthCheck)
+router.get("/health-check", healthCheck)
 
 export default router;
