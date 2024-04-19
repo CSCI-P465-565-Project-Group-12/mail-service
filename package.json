@@ -4,8 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "npx tsc",
+    "build": "npx tsc && npm run copy-templates",
     "start": "node dist/app.js",
+    "copy-templates": "cp -r src/templates dist/templates",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
